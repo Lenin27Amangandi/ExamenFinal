@@ -1,0 +1,103 @@
+<mxfile host="65bd71144e">
+    <diagram id="Js4i6e2sUqqA8US9_Xuu" name="Page-1">
+        <mxGraphModel dx="1202" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="CatalogoTIpo" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="40" width="160" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="(PK) idCatalogoTipo&lt;br&gt;Nombre&lt;br&gt;Estado&lt;br&gt;FechaModificacion&lt;br&gt;FechaCreacion" style="html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];resizeWidth=1;" parent="2" vertex="1">
+                    <mxGeometry y="30" width="160" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Catalogo" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="345" y="40" width="140" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="(PK) idCatalogo&lt;br&gt;(FK) IdCatalogoTipo&lt;br&gt;Nombre&lt;br&gt;Estado&lt;br&gt;Pais&lt;br&gt;FechaModificacion&lt;br&gt;FechaCreacion" style="html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];resizeWidth=1;" parent="4" vertex="1">
+                    <mxGeometry y="30" width="140" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=none;html=1;exitX=1.004;exitY=0.245;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.003;entryY=0.323;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;strokeColor=none;elbow=vertical;curved=1;" parent="1" source="3" target="5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="170" as="sourcePoint"/>
+                        <mxPoint x="330" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="" style="endArrow=ERmany;startArrow=classic;html=1;curved=1;elbow=vertical;endFill=0;exitX=1;exitY=0.426;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="235" y="114.63" as="sourcePoint"/>
+                        <mxPoint x="345" y="114.63" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="Localidad" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="40" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="(PK) idLocalidad&lt;br&gt;(FK) IdPadre&lt;br&gt;(FK) idCatalogo&lt;br&gt;Estado&lt;br&gt;FechaModificacion&lt;br&gt;FechaCreacion" style="html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];resizeWidth=1;" parent="14" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="endArrow=classic;startArrow=classic;html=1;curved=1;elbow=vertical;exitX=1.003;exitY=0.272;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.555;entryY=0.005;entryDx=0;entryDy=0;entryPerimeter=0;" parent="14" source="15" target="14" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="200" y="45" as="sourcePoint"/>
+                        <mxPoint x="250" y="-5" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="220" y="-45"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="" style="endArrow=ERmany;startArrow=classic;html=1;curved=1;elbow=vertical;endFill=0;entryX=-0.012;entryY=0.361;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.993;exitY=0.224;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5" target="15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="485" y="99.63" as="sourcePoint"/>
+                        <mxPoint x="595" y="99.63" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="GenoAlimento" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="340" width="140" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="(PK) idGenoAlimento&lt;br&gt;Nombre&lt;br&gt;Estado&lt;br&gt;Pais&lt;br&gt;FechaModificacion&lt;br&gt;FechaCreacion" style="html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];resizeWidth=1;" parent="18" vertex="1">
+                    <mxGeometry y="30" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="IngestaNativa" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="320" width="140" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="(PK) idIngestaNativa&lt;br&gt;Nombre&lt;br&gt;Estado&lt;br&gt;FechaModificacion&lt;br&gt;FechaCreacion" style="html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];resizeWidth=1;" parent="20" vertex="1">
+                    <mxGeometry y="30" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Tipo Hormiga" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="340" width="140" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="(PK) idGenoAlimento&lt;br&gt;Nombre&lt;br&gt;Estado&lt;br&gt;Pais&lt;br&gt;FechaModificacion&lt;br&gt;FechaCreacion" style="html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];resizeWidth=1;" parent="22" vertex="1">
+                    <mxGeometry y="30" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Hormiga" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="200" width="140" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="(PK) idGenoAlimento&lt;br&gt;Nombre&lt;br&gt;Estado&lt;br&gt;Pais&lt;br&gt;FechaModificacion&lt;br&gt;FechaCreacion" style="html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];resizeWidth=1;" parent="24" vertex="1">
+                    <mxGeometry y="30" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="endArrow=ERmany;startArrow=classic;html=1;curved=1;elbow=vertical;endFill=0;entryX=-0.012;entryY=0.361;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.993;exitY=0.224;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="391.11" as="sourcePoint"/>
+                        <mxPoint x="604.06" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="" style="endArrow=ERmany;startArrow=classic;html=1;curved=1;elbow=vertical;endFill=0;entryX=-0.012;entryY=0.361;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.993;exitY=0.224;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="175.94" y="401.11" as="sourcePoint"/>
+                        <mxPoint x="319.99999999999994" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=ERmany;startArrow=classic;html=1;curved=1;elbow=vertical;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.993;exitY=0.224;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" target="24">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="790" y="111.11000000000013" as="sourcePoint"/>
+                        <mxPoint x="934.06" y="110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="" style="endArrow=ERmany;startArrow=classic;html=1;curved=1;elbow=vertical;endFill=0;entryX=0.49;entryY=1.009;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.002;exitY=0.327;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="21" target="25">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="750" y="341.1100000000001" as="sourcePoint"/>
+                        <mxPoint x="894.06" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
